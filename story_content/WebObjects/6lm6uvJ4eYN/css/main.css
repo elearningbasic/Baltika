@@ -1,0 +1,25 @@
+@font-face {
+  font-family: Akrobat;
+  src: url('../fonts/Akrobat.ttf');
+}
+
+body {
+    font-family: Akrobat;
+    font-size: 56px;
+    line-height: 50.4px;
+    margin:0px;
+  }
+  .timer {
+    display:flex;
+    width:87px;
+  }
+  .dots {
+    height:52px;
+    margin:0px 5px;
+    line-height: 50.4px;
+  }
+  .minutes, .seconds {
+    width:54px;
+    height:52px;
+    text-align: left;
+  }

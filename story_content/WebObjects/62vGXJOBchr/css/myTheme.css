@@ -1,0 +1,135 @@
+/* theme "rounded", "rounded-dark", "rounded-dots", "my-theme" */
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #ac9365;
+  height: 48px;
+  width: 4px;
+  border-radius: 16px;
+}
+
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #00193e;
+  width: 4px;
+}
+
+.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #ac9365;
+  width: 4px;
+}
+
+.mCSB_inside > .mCSB_container {
+  /*margin-right: 36px;*/
+}
+
+/* Ползунок вертикальный */
+.mCSB_scrollTools.mCSB_scrollTools_vertical .mCSB_dragger .mCSB_dragger_bar {
+  width: 4px;
+}
+
+/* Полоса прокрутки вертикальная */
+.mCSB_scrollTools.mCSB_scrollTools_vertical .mCSB_draggerRail {
+  background-color: #c9cbcf;
+  opacity: 50%;
+  border-radius: 16px;
+  width: 4px;
+}
+
+/* Контейнер для ползунка вертикальный */
+.mCSB_scrollTools.mCSB_scrollTools_vertical .mCSB_dragger {
+  max-height: 100% !important; /* Лень лезть в css либы */
+}
+
+/* ---------------------------------------- */
+
+@font-face {
+  font-family: Akrobat; /* Имя шрифта */
+  src: url(../fonts/Akrobat.ttf);
+  /* Путь к файлу со шрифтом */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Akrobat;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 500;
+  background-color: #f4f5f5;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  color: #AC9365;}
+
+.oglavl {
+  padding: 0px;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper .element {
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+  height: 26px;
+  cursor: pointer;
+  border: 2px solid #AC9365;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.wrapper .element:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.wrapper .element:hover .text {
+  color: #ac9365;
+}
+
+.wrapper .element .text {
+  color: #00193e;
+  width: 100%;
+  user-select: none;
+  -ms-user-select: none;
+}
+
+.wrapper .element.disabled {
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.wrapper .element .icon {
+  margin: 0 25px 0 10px;
+  height: 26px;
+  width: 26px;
+  flex-shrink: 0;
+}
+
+.wrapper .element.disabled .icon {
+  background: url(../img/dis.png) no-repeat;
+  border: none;
+  background-position: center;
+  background-size: contain;
+}
+
+.wrapper .element.completed .icon {
+  background: url(../img/com.png) no-repeat;
+  background-position: center;
+  border: none;
+  background-size: contain;
+}
+
+.wrapper .element.current .icon {
+  background: url(../img/cur.png) no-repeat;
+  border: none;
+  background-position: center;
+  background-size: contain;
+}

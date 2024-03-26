@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  display: flex;
+}
+
+.progress-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.progress-container > *:not(:first-child) {
+  margin-right: 20px;
+}
+
+.progress-container__point {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #F4F5F5;
+  border-radius: 50%;
+}
+
+.progress-container__point--current {
+  background-color: #ac9365;
+  border: 1px solid #ac9365;
+}
+
+.progress-container__point--current ~ * {
+  background-color: #F4F5F5;
+  border: 1px solid #F4F5F5;
+}

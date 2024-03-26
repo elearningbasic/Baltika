@@ -1,0 +1,118 @@
+@font-face {
+  font-family: 'Proxima-nova';
+  src: url('../fonts/ProximaNova-Regular.ttf');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Proxima-nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  height: auto;
+}
+
+.scroll-container {
+  margin-top: 50px;
+}
+
+.main-area {
+  display: flex;
+  width: 720px;
+  height: 228px;
+  margin: 10px;
+}
+
+#sortable {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 223px;
+}
+
+#sortable li {
+  display: block;
+  padding: 5px 10px 5px 40px;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  border-radius: 30px;
+  background-color: #fff;
+  color: #262a40;
+  background-repeat: no-repeat;
+  background-position: 18px center;
+  background-color: #fff;
+}
+
+#sortable li:first-child {
+  margin-top: 5px;
+}
+
+#sortable li:hover {
+  border: 2px solid #ac9365;
+  cursor: pointer;
+  color: #fff;
+  background-color: #ac9365;
+}
+
+.ui-sortable-placeholder {
+  visibility: hidden;
+}
+
+.ui-sortable-placeholder::after {
+  content: 'test';
+  margin: 15px;
+  padding: 5px 10px 5px 40px;
+}
+
+#order {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-size: 18px;
+  line-height: 22px;
+  margin-right: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 228px;
+}
+
+#order span {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 50px;
+  width: 50px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #262a40;
+  background: #ffffff;
+}
+
+#sortable li.correct {
+  border: 2px solid #31827f;
+  background-color: #31827f;
+  color: #fff;
+  background-image: none;
+  padding-left: 20px;
+}
+
+#sortable li.wrong {
+  border: 2px solid #d13d69;
+  background-color: #d13d69;
+  color: #fff;
+  background-image: none;
+  padding-left: 20px;
+}
